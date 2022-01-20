@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="py-16 lg:flex lg:space-x-8 flex justify-center">
+  <a
+    href="/"
+    class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="-ml-1 mr-2 h-5 w-5"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span> Back </span>
+  </a>
+</div>
+
+<section class="text-lg max-w-prose mx-auto pb-32">
+  <h1 class="pb-16">
+    <time
+      class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
+      >{{page.date | date: "%b %d, %Y"}}</time
+    >
+    <span
+      class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-5xl"
+      >{{page.title}}</span
+    >
+  </h1>
+
+  {% if page.category == "podcast" %}
+  <div class="flex w-full justify-center pb-16">
+    <iframe
+      src="{{ page.podcast_url }}"
+      width="100%"
+      height="232"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    ></iframe>
+  </div>
+  {% endif %}
+
+  <article class="prose lg:prose-xl">{{content}}</article>
+</section>
