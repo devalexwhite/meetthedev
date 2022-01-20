@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <!-- <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+    </nav> -->
+    {% include header.html %}
+    <div class="w-full flex justify-center py-16">
+      {% include navbar.html %}
+    </div>
+    <h1 class="text-red-500 font-bold text-5xl">{{ page.title }}</h1>
+    <section class="px-8 md:px-0 max-w-prose mx-auto">{{ content }}</section>
+  </body>
+</html>
