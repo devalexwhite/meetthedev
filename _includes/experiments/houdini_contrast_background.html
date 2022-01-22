@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+  </head>
+  <body>
+    <label id="sample-label">
+      <div>
+        Set a text color below and the background will change to either black or
+        white depending on the WCAG AA contrast ratio.
+      </div>
+      <input type="color" id="text-color" value="#4e1515" />
+    </label>
+
+    <div id="target">Sample text based on color</div>
+
+    <style>
+      @property --primary-color {
+        syntax: "<color>";
+        inherits: false;
+      }
+
+      :root {
+        --primary-color: #4e1515;
+      }
+
+      #sample-label {
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247);
+        padding: 0.5rem;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      #target {
+        width: 400px;
+        height: 400px;
+        color: var(--primary-color);
+        background-image: paint(aaContrast);
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input {
+        margin: 0.5rem 0;
+      }
+    </style>
+
+    <script type="module" defer>
+      CSS.paintWorklet.addModule(
+        "/assets/scripts/houdini_contrast_background.js"
+      );
+      const doc = document.documentElement;
+
+      document
+        .getElementById("text-color")
+        .addEventListener("change", function (e) {
+          doc.style.setProperty("--primary-color", e.target.value);
+        });
+    </script>
+  </body>
+</html>
