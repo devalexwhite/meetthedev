@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A simple case for chatbot websites"
+description: "Is there a case for chatbots over traditional websites?"
 date: 2020-07-06 09:57:55 -0500
 category: article
 excerpt_separator: <!--more-->

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SimpleUX episode - CSS Houdini"
+description: "Let's talk about the history and future of CSS Houdini"
 date: 2022-01-19 09:57:55 -0500
 category: podcast
 podcast_url: https://open.spotify.com/embed/episode/2Qiwre2Uo0goL79hy4uk8g?utm_source=generator

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Generating accessible backgrounds using CSS Houdini"
+description: "What if we could generate WCAG AA accessible backgrounds with a single line of CSS? With CSS Houdini, we can!"
 date: 2022-01-22 09:57:55 -0500
 category: article
 excerpt_separator: <!--more-->
