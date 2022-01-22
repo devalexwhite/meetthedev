@@ -5,12 +5,19 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="title" property="og:title" content="{{ page.title }}" />
+    <meta name="author" content="Alex White" />
+    <meta
+      name="description"
+      property="og:description"
+      content="{{ page.description}}"
+    />
+
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/main.css" />
-    <meta name="title" content="{{ page.title}}" />
+
     <meta name="description" content="{{ page.description}}" />
-    <og:title content="{{ page.title }}" />
-    <og:description content="{{ page.description }}" />
+
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <script src="/particles.js"></script>
   </head>
