@@ -172,3 +172,9 @@ With everything in place, our CSS worklet should be ready! The finished example 
 ## Final code
 
 You can see the final code on Github. [https://gist.github.com/devalexwhite/fce21fa633cdebbaa4fff8620e91a14f](https://gist.github.com/devalexwhite/fce21fa633cdebbaa4fff8620e91a14f)
+
+## Parting thoughts
+
+Although a lot of the demos we've seen so far for the Houdini Painting API have been demos showing cool background generation, there's potential to use these new APIs to tackle real problems like accessibility. As the APIs evolve, I'm excited to see what people do with them!
+
+Interested in learning more about CSS Houdini and the other features it brings? [Check out the Podcast](https://www.meetthe.dev/podcast/2022/01/19/simpleux-podcast.html) I did on the subject.
